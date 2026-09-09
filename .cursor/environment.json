@@ -1,0 +1,18 @@
+{
+  "name": "personal-blog (Jekyll)",
+  "user": "root",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "install": "bundle install",
+  "terminals": [
+    {
+      "name": "jekyll-serve",
+      "command": "bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload"
+    }
+  ],
+  "ports": [
+    { "name": "jekyll", "port": 4000 },
+    { "name": "livereload", "port": 35729 }
+  ]
+}
